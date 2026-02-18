@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Практика Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DOM Практика Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>DOM 1: Элементтер менен иштөө</h2>
+            <p id="mainText">Бул текст DOM аркылуу өзгөртүлөт.</p>
+            <button class="blue-btn" onclick="changeText()">Текстти өзгөртүү</button>
+        </section>
+
+        <section class="card">
+            <h2>Поиск жана Калькулятор</h2>
+            <input type="text" id="searchInput" placeholder="Фрукттарды издөө..." onkeyup="searchFruits()">
+            <ul id="fruitList">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+            </ul>
+            
+            <div class="divider"></div>
+
+            <div class="calc-inputs">
+                <input type="number" id="num1" placeholder="сан1">
+                <input type="number" id="num2" placeholder="сан2">
+            </div>
+            <button class="blue-btn" onclick="calculate()">Сумма эсептөө</button>
+            <p id="calcResult">Жыйынтык: 0</p>
+        </section>
+
+        <section class="card">
+            <h2>DOM 3: Текст редактор</h2>
+            <div id="editableText" contenteditable="true">Бул текстти өзгөртсө болот</div>
+            <button class="blue-btn" onclick="saveText()">Сактоо</button>
+        </section>
+
+        <section class="card">
+            <h2>DOM4: SetAttribute & GetAttribute</h2>
+            <img id="dynamicImg" src="1643a7bb1b2f1a1cc03529787e998f06-300x228.jpg" alt="Placeholder">
+            <br>
+            <button class="blue-btn" onclick="changeImage()">Сүрөттү алмаштыруу</button>
+        </section>
+
+        <section class="card">
+            <h2>DOM5: createElement & prepend</h2>
+    <input type="text" id="itemInput" placeholder="Жаңы элемент жаз">
+            <button class="blue-btn" onclick="addNewElement()">Кошуу</button>
+            <ul id="listContainer">
+                <li>Элемент 1</li>
+                <li>Элемент 2</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
